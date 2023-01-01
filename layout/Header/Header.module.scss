@@ -1,0 +1,30 @@
+@import "./styles/variables.module";
+
+.header {
+   background-color: $white;
+   min-height: 70px;
+}
+
+.row {
+   display: grid;
+   grid-template-columns: 75px 1fr 100px;
+   place-items: center;
+}
+
+.list {
+   display: flex;
+   justify-content: space-between;
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.use {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-column-gap: 17px;
+}
+
+.active {
+   color: $blue;
+   font-weight: 700;
+}

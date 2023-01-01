@@ -7,6 +7,10 @@
    font-size: 14px;
    border-radius: 6px;
    transition: background-color 0.3s, color 0.3s;
+
+   & svg {
+      margin-right: 5px;
+   }
 }
 
 .primary {
@@ -16,6 +20,10 @@
    &:hover {
       color: #1669d4;
       background-color: #e2efff;
+
+      & svg {
+         fill: #1669d4;
+      }
    }
 }
 
@@ -28,5 +36,9 @@
    &:hover {
       color: #182a42;
       background-color: #ececec;
+
+      & svg {
+         fill: #182a42;
+      }
    }
 }
