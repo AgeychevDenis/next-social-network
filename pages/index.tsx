@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head';
 import { Button } from '../components';
 import Header from '../layout/Header/Header';
+import Sitebar from '../layout/Sitebar/Sitebar';
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,8 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
+
+      <Sitebar />
 
       <main>
         <Button icon='phone' appearance="primary">Call Group</Button>
