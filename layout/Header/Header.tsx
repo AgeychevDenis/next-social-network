@@ -8,10 +8,6 @@ import LogoIcon from './logo.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 
-type PopupClick = MouseEvent & {
-   path: Node[];
-}
-
 const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
    const [activeIndex, setActiveIndex] = useState(0);
 
@@ -31,32 +27,32 @@ const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
    return (
       <header
          {...props}
-         className={styles.header}
+         className={styles.wrapper}
       >
-         <div className={styles.row}>
-            <div className={styles.logo}><Link href="/" className="logo"><a><LogoIcon /></a></Link></div>
-            <nav className={styles.menu}>
-               <ul className={styles.list}>
-                  {category.map((item, idx: number) => <li onClick={() => onClickCategory(idx)} className={activeIndex === idx ? styles.active : null} key={idx}><Link href={item.url}><a className={styles.link}>{item.title}</a></Link></li>)}
-               </ul>
-            </nav>
-            <div className={styles.use}>
-               <div className={styles.search}>
-                  <SearchIcon />
-               </div>
-               <div className={styles.user}>
-                  <Link href="/">
-                     <a>
-                        <Image src={UserImage} width={60} height={60} alt="user" />
-                     </a>
-                  </Link>
+         <div className="container">
+            <div className={styles.row}>
+               <div className={styles.logo}><Link href="/" className="logo"><a><LogoIcon /></a></Link></div>
+               <nav className={styles.menu}>
+                  <ul className={styles.list}>
+                     {category.map((item, idx: number) => <li onClick={() => onClickCategory(idx)} className={activeIndex === idx ? styles.active : ''} key={idx}><Link href={item.url}><a className={styles.link}>{item.title}</a></Link></li>)}
+                  </ul>
+               </nav>
+               <div className={styles.use}>
+                  <div className={styles.search}>
+                     <SearchIcon />
+                  </div>
+                  <div className={styles.user}>
+                     <Link href="/">
+                        <a>
+                           <Image src={UserImage} width={46} height={46} alt="user" />
+                        </a>
+                     </Link>
+                  </div>
                </div>
             </div>
          </div>
-
-
       </header>
    );
 };
 
-export default Header
+export default Header;

@@ -1,30 +1,111 @@
 @import "./styles/variables.module";
 
-.header {
-   background-color: $white;
-   min-height: 70px;
+.wrapper {
 }
 
 .row {
    display: grid;
-   grid-template-columns: 75px 1fr 100px;
+   min-height: 70px;
+   background-color: $white;
+   grid-template-columns: 75px 1fr 140px;
    place-items: center;
+}
+
+.menu {
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: 700px;
+   width: 100%;
 }
 
 .list {
    display: flex;
+   flex-basis: 100%;
    justify-content: space-between;
-   max-width: 800px;
    margin: 0 auto;
+
+   li {
+      transition: all 0.3s;
+
+      &:hover {
+         color: $blue;
+      }
+   }
+}
+
+.logo {
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   border-right: 1px solid $color-body;
+
+   svg {
+      margin-top: 14px;
+   }
 }
 
 .use {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    grid-column-gap: 17px;
+   margin-right: 20px;
 }
 
 .active {
    color: $blue;
    font-weight: 700;
+   position: relative;
+
+   &::before {
+      content: "";
+      position: absolute;
+      top: -23px;
+      width: 100%;
+      height: 4px;
+      background-color: $blue;
+      border-radius: 0px 0px 4px 4px;
+   }
+}
+
+.search {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+
+   & svg g {
+      transition: stroke 0.3s;
+   }
+
+   &:hover svg g {
+      stroke: $blue;
+   }
+}
+
+.user {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background-color: $white;
+   filter: drop-shadow(-1px 1px 4px $blue);
+   position: relative;
+
+   img {
+      border-radius: 50%;
+      left: 3px !important;
+      top: 3px !important;
+   }
+
+   a::after {
+      content: "";
+      position: absolute;
+      width: 96%;
+      height: 96%;
+      border-radius: 50%;
+      top: 1px;
+      left: 1px;
+      border: 2px solid $blue;
+   }
 }
