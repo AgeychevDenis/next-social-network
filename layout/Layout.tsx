@@ -1,7 +1,7 @@
 import { LayoutProps } from './Layout.props';
 import styles from './Layout.module.scss';
 import Header from './Header/Header';
-import Sitebar from './Sitebar/Sitebar';
+import Sidebar from './Sidebar/Sidebar';
 import Footer from './Footer/Footer';
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
@@ -9,9 +9,9 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
       <div className={styles.wrapper}>
 
          <Header className={styles.header} />
-
+         <Sidebar className={styles.sidebar} />
          <main className={styles.body}>
-            <Sitebar className={styles.sitebar} />
+
             {children}
          </main>
 

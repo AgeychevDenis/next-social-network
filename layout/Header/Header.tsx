@@ -1,4 +1,5 @@
-import React, { useState, MouseEvent } from 'react';
+import React, { useState } from 'react';
+import cn from 'classnames';
 import { HeaderProps } from './Header.props';
 import UserImage from '../../public/assets/img/users/header-user.jpg'
 import styles from './Header.module.scss';
@@ -26,28 +27,26 @@ const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 
    return (
       <header
+         className={cn(className, styles.header)}
          {...props}
-         className={styles.wrapper}
       >
-         <div className="container">
-            <div className={styles.row}>
-               <div className={styles.logo}><Link href="/" className="logo"><a><LogoIcon /></a></Link></div>
-               <nav className={styles.menu}>
-                  <ul className={styles.list}>
-                     {category.map((item, idx: number) => <li onClick={() => onClickCategory(idx)} className={activeIndex === idx ? styles.active : ''} key={idx}><Link href={item.url}><a className={styles.link}>{item.title}</a></Link></li>)}
-                  </ul>
-               </nav>
-               <div className={styles.use}>
-                  <div className={styles.search}>
-                     <SearchIcon />
-                  </div>
-                  <div className={styles.user}>
-                     <Link href="/">
-                        <a>
-                           <Image src={UserImage} width={46} height={46} alt="user" />
-                        </a>
-                     </Link>
-                  </div>
+         <div className={styles.row}>
+            <div className={styles.logo}><Link href="/" className="logo"><a><LogoIcon /></a></Link></div>
+            <nav className={styles.menu}>
+               <ul className={styles.list}>
+                  {category.map((item, idx: number) => <li onClick={() => onClickCategory(idx)} className={activeIndex === idx ? styles.active : ''} key={idx}><Link href={item.url}><a className={styles.link}>{item.title}</a></Link></li>)}
+               </ul>
+            </nav>
+            <div className={styles.use}>
+               <div className={styles.search}>
+                  <SearchIcon />
+               </div>
+               <div className={styles.user}>
+                  <Link href="/">
+                     <a>
+                        <Image src={UserImage} width={46} height={46} alt="user" />
+                     </a>
+                  </Link>
                </div>
             </div>
          </div>
