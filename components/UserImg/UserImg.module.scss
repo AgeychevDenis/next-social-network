@@ -1,0 +1,31 @@
+@import "./styles/variables.module";
+
+.img {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   border: 1px solid $color-body;
+   background-color: $white;
+   border-radius: 50%;
+   filter: drop-shadow(-1px 1px 4px rgba(120, 130, 146, 0.3));
+
+   img {
+      border-radius: 50%;
+   }
+}
+
+.sizeS {
+   width: 26px;
+   height: 26px;
+}
+
+.sizeM {
+   width: 38px;
+   height: 38px;
+}
+
+.sizeL {
+   width: 56px;
+   height: 56px;
+}
