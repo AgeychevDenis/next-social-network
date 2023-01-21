@@ -7,6 +7,7 @@ import UserImage from '../../public/assets/img/users/online1.jpg'
 import UserImage2 from '../../public/assets/img/users/online2.jpg'
 import UserImage3 from '../../public/assets/img/users/online3.jpg'
 import UserImage4 from '../../public/assets/img/users/online4.jpg'
+import { MenuPost } from "../MenuPost/MenuPost";
 
 export const OnlineContacts = ({ className, ...props }: OnlineContactsProps): JSX.Element => {
    return (
@@ -19,11 +20,7 @@ export const OnlineContacts = ({ className, ...props }: OnlineContactsProps): JS
                <Htag tag="h2">Друзья онлайн</Htag>
                <span className={styles.state}></span>
             </div>
-            <div className={styles.menu}>
-               <span></span>
-               <span></span>
-               <span></span>
-            </div>
+            <MenuPost />
          </div>
 
          <div className={styles.inner}>
@@ -46,5 +43,5 @@ export const OnlineContacts = ({ className, ...props }: OnlineContactsProps): JS
          </div>
 
       </div>
-   )
-}
+   );
+};

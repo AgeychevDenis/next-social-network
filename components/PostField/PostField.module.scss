@@ -1,0 +1,24 @@
+@import "./styles/variables.module";
+
+.wrapper {
+   width: 100%;
+   min-height: 55px;
+   background-color: $white;
+   border-radius: 10px;
+   border: 1px solid $color-border;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   cursor: pointer;
+   transition: background-color 0.3s;
+
+   &:hover {
+      background-color: $hover-user;
+   }
+}
+
+.icon {
+   position: absolute;
+   right: 20px;
+}

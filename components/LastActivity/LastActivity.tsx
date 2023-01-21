@@ -24,5 +24,5 @@ export const LastActivity = ({ className, ...props }: LastActivityProps) => {
             <Button appearance='primary' icon='message'>Видеозвонок</Button>
          </div>
       </div >
-   )
-}
+   );
+};

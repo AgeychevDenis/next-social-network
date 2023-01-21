@@ -1,0 +1,18 @@
+@import "./styles/variables.module";
+
+.menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 18px;
+   height: 18px;
+   cursor: pointer;
+
+   span {
+      width: 4px;
+      height: 4px;
+      background-color: $gray;
+      border-radius: 50%;
+      opacity: 0.4;
+   }
+}

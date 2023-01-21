@@ -82,3 +82,9 @@ h6 {
   max-width: 1480px;
   padding: 0 20px;
 }
+
+.bodyInner {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
