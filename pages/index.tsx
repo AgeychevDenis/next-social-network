@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { OnlineContacts, LastActivity, PostField, PostFrends } from '../components';
+import { OnlineContacts, LastActivity, PostField, PostFrends, Stories, Articles } from '../components';
 import { withLayout } from '../layout/Layout';
 
 const Home: NextPage = () => {
@@ -14,6 +14,8 @@ const Home: NextPage = () => {
         <PostFrends />
       </div>
       <div className='bodyInner'>
+        <Stories />
+        <Articles />
       </div>
     </>
   )

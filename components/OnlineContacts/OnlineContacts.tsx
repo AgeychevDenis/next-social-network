@@ -3,10 +3,10 @@ import styles from './OnlineContacts.module.scss';
 import { Htag } from "../Htag/Htag";
 import { UserImg } from "../UserImg/UserImg";
 
-import UserImage from '../../public/assets/img/users/online1.jpg'
-import UserImage2 from '../../public/assets/img/users/online2.jpg'
-import UserImage3 from '../../public/assets/img/users/online3.jpg'
-import UserImage4 from '../../public/assets/img/users/online4.jpg'
+import UserImage from '../../public/assets/img/users/online1.jpg';
+import UserImage2 from '../../public/assets/img/users/online2.jpg';
+import UserImage3 from '../../public/assets/img/users/online3.jpg';
+import UserImage4 from '../../public/assets/img/users/online4.jpg';
 import { MenuPost } from "../MenuPost/MenuPost";
 
 export const OnlineContacts = ({ className, ...props }: OnlineContactsProps): JSX.Element => {
