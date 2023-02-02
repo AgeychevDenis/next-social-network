@@ -9,3 +9,4 @@ export * from './PostFrends/PostFrends';
 export * from './MenuPost/MenuPost';
 export * from './Stories/Stories';
 export * from './Articles/Articles';
+export * from './Modal/Modal';
