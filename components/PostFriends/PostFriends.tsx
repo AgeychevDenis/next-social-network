@@ -1,6 +1,6 @@
 import React from 'react';
-import { PostFrendsProps } from './PostFrends.props';
-import styles from './PostFrends.module.scss';
+import { PostFriendsProps } from './PostFriends.props';
+import styles from './PostFriends.module.scss';
 
 import { Htag } from '../Htag/Htag';
 import { Ptag } from '../Ptag/Ptag';
@@ -13,7 +13,7 @@ import IconMessage from './icons/message.svg';
 import IconShare from './icons/share.svg';
 
 
-export const PostFrends = ({ className, ...props }: PostFrendsProps): JSX.Element => {
+export const PostFriends = ({ className, ...props }: PostFriendsProps): JSX.Element => {
    return (
       <div className={styles.wrapper} {...props}>
          <div className={styles.inner}>
